@@ -20,8 +20,6 @@ class Tree extends Widget
     public $autoEscape = false;
     public $dragAndDropUrl = true;
 
-    public static $theme = 'jekiakazer0\nsjqtree\TreeAssets';
-
     const DEPTH_KEY = 'depth';
     const LABEL_KEY = 'label';
     const ID_KEY = 'id';
@@ -50,8 +48,7 @@ class Tree extends Widget
          * @var \yii\web\AssetBundle $asset
          */
         $view = $this->getView();
-        $asset = static::$theme;
-        $asset::register($view);
+        TreeAssets::register($view);
 
         if ($this->dataJson) {
             $options = $this->dataJson.
