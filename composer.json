@@ -1,0 +1,23 @@
+{
+	"name": "jeki-aka-zer0/yii2-nsjqtree",
+	"description": "Tree built using Nested Sets and jqTree.",
+	"keywords": ["yii2", "extension", "widget", "jqtree", "nested sets"],
+	"homepage": "https://github.com/jeki-aka-zer0/yii2-nested-set-jqtree",
+	"type": "yii2-extension",
+	"license": "BSD-3-Clause",
+	"authors": [
+        {
+            "name": "zer0",
+            "email": "zer0.stat@mail.ru"
+        }
+	],
+	"require": {
+		"yiisoft/yii2": "*",
+		"bower-asset/jqtree": "*",
+	},
+	"autoload": {
+		"psr-4": {
+			"jekiakazer0\\nsjqtree\\": ""
+		}
+	}
+}
