@@ -6,7 +6,7 @@ use yii\web\AssetBundle;
 
 class TreeAssets extends AssetBundle
 {
-    public $sourcePath = '@vendor/jeki-aka-zer0/yii2-nested-set-jqtree/assets';
+    public $sourcePath = '@vendor/jeki-aka-zer0/yii2-nsjqtree/assets';
 
     /*public $css = [
         'css/jqtree.css',
