@@ -1,5 +1,5 @@
 {
-	"name": "jeki-aka-zer0/yii2-nested-set-jqtree",
+	"name": "jeki-aka-zer0/yii2-nsjqtree",
 	"description": "Tree built using Nested Sets and jqTree.",
 	"keywords": ["yii2", "extension", "widget", "jqtree", "nested sets"],
 	"homepage": "https://github.com/jeki-aka-zer0/yii2-nested-set-jqtree",

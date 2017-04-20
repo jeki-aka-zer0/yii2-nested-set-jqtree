@@ -10,12 +10,12 @@ The preferred way to install this extension is through [composer](http://getcomp
 Either run
 
 ```
-php composer.phar require jeki-aka-zer0/yii2-nested-set-jqtree "*"
+php composer.phar require jeki-aka-zer0/yii2-nsjqtree "*"
 ```
 or add
 
 ```json
-"jeki-aka-zer0/yii2-nested-set-jqtree" : "*"
+"jeki-aka-zer0/yii2-nsjqtree" : "*"
 ```
 
 to the require section of your application's `composer.json` file.
