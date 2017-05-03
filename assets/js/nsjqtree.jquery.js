@@ -11,7 +11,9 @@
 
                 if (selectedNode) {
                     var node = $tree.tree('getNodeById', selectedNode);
-                    $tree.tree('selectNode', node);
+                    $tree
+                        .tree('selectNode', node)
+                        .tree('openNode', node);
                 }
             },
 

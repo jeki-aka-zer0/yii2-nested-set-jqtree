@@ -1,0 +1,8 @@
+.jqtree-selected > .jqtree-element {
+  background: #286090 !important;
+  border-radius: 4px;
+  padding-left: 5px;
+}
+.jqtree-selected > .jqtree-element .ns-jqtree__item {
+  color: #fff;
+}

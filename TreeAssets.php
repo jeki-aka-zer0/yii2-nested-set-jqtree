@@ -12,8 +12,13 @@ class TreeAssets extends AssetBundle
         'js/nsjqtree.jquery.js',
     ];
 
+    public $css = [
+        'css/jqtree.bootstrap.css',
+    ];
+
     public $depends = [
         'yii\web\JqueryAsset',
+        'yii\bootstrap\BootstrapAsset',
         'jekiakazer0\nsjqtree\JQTreeAssets',
     ];
 }
