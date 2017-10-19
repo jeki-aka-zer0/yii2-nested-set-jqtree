@@ -1,6 +1,6 @@
 <?php
 
-namespace jekiakazer0\nsjqtree;
+namespace jekiakazer0\nsjqtree\src\assets;
 
 use yii\web\AssetBundle;
 

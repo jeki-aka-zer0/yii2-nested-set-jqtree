@@ -1,7 +1,7 @@
 jqTree.js widget for Yii2
 ============================
 
-Renders a [nested tree](https://github.com/creocoder/yii2-nested-sets) with a [jqTree.js plugin](https://github.com/mbraak/jqTree) widget.
+Renders a nested tree with a [jqTree.js plugin](https://github.com/mbraak/jqTree) widget.
 
 Installation
 ------------
@@ -31,14 +31,12 @@ class CategoryController extends Controller
     {
         return [
             'dnd' => [
-                'class' => 'jekiakazer0\nsjqtree\DndAction'
+                'class' => jekiakazer0\nsjqtree\src\actions\DndAction::class,
             ],
         ];
     }
 }
 ```
-
-
 
 Usage
 -----
@@ -46,7 +44,7 @@ Usage
 ```php
 <?php
 
-echo jekiakazer0\nsjqtree\Tree::widget([
-    'modelName' => ArticleCategory::className(),
+echo jekiakazer0\nsjqtree\src\Tree::widget([
+    'modelName' => Category::class,
 ]);
 ```

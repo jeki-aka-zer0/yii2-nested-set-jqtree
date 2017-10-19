@@ -1,6 +1,6 @@
 <?php
 
-namespace jekiakazer0\nsjqtree;
+namespace jekiakazer0\nsjqtree\src\actions;
 
 use Yii;
 use yii\base;
@@ -9,16 +9,16 @@ use creocoder\nestedsets\NestedSetsBehavior;
 
 /**
  * Class DndAction
- * @package jekiakazer0\nsjqtree
+ * @package jekiakazer0\nsjqtree\src\actions
  *
- * action - move nested set node
+ * action - move nested set node via creocoder/yii2-nested-sets
  *
  * Usage:
  * <code>
  * public function actions(){
  *  return [
  *      'dnd' => [
- *          'class' => 'jekiakazer0\nsjqtree\DndAction',
+ *          'class' => 'jekiakazer0\nsjqtree\src\actions\DndAction',
  *      ],
  *  ];
  * }
@@ -30,9 +30,9 @@ use creocoder\nestedsets\NestedSetsBehavior;
 class DndAction extends base\Action
 {
     /**
-     * @var string - name of search model
+     * @var string - name of find model method
      */
-    public $modelName = '';
+    public $findModelMethod = 'findModel';
     /**
      * @var string - name of position key in $_POST array
      */
@@ -58,7 +58,7 @@ class DndAction extends base\Action
      */
     public function run()
     {
-        $method = 'findModel';
+        $method = $this->findModelMethod;
         if (!method_exists($this->controller, $method)) {
             throw new Exception("Method Controller::{$method}() not found");
         }
