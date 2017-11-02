@@ -46,6 +46,6 @@ class JsonNestedSetsHelper extends NestedSetsHelper
 
     protected function getNodeLabel(): string
     {
-        return "{label:'".parent::getNodeLabel()."',id:{$this->node[$this->config->keys->id]}";
+        return "{label:'".parent::getNodeLabel()."',id:'{$this->node[$this->config->keys->id]}'";
     }
 }

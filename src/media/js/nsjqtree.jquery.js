@@ -12,7 +12,7 @@
         _setSelectedNode: function () {
             var selectedNode = $tree.data('selected-node-id');
 
-            if (selectedNode) {
+            if (typeof selectedNode !== 'undefined') {
                 var node = $tree.tree('getNodeById', selectedNode);
                 $tree
                     .tree('selectNode', node)

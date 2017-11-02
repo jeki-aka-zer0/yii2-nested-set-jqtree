@@ -95,7 +95,7 @@ class Tree extends Widget
         }
 
         // selected mode
-        if ($selectedNodeId = $this->getSelectedNodeId()) {
+        if (($selectedNodeId = $this->getSelectedNodeId()) !== null) {
             $this->options['data']['selected-node-id'] = $selectedNodeId;
         }
 
