@@ -141,7 +141,7 @@ class Tree extends Widget
             ->renderTree();
 
         $js = <<<JS
-$('.{$this->options['class']}').nstree({
+$('.{$this->options['class']}').tree({
     data: {$treeJson},
     autoEscape: false,
     dragAndDrop: {$dragAndDrop}
