@@ -35,7 +35,7 @@ class Tree extends Widget
         $this->initOptions();
     }
 
-    private function initParameters()
+    protected function initParameters()
     {
         if ($this->nodes === null && $this->modelName === null) {
             throw new InvalidConfigException('You must set data or model name.');
@@ -56,7 +56,7 @@ class Tree extends Widget
             ->nodes($this->nodes);
     }
 
-    private function getNodes()
+    protected function getNodes()
     {
         $keys = $this->config->keys;
         $select = [
@@ -78,7 +78,7 @@ class Tree extends Widget
             ->all();
     }
 
-    private function initOptions()
+    protected function initOptions()
     {
         $this->options = (array)$this->options;
 
@@ -123,7 +123,7 @@ class Tree extends Widget
         }
     }
 
-    private function registerAssets()
+    protected function registerAssets()
     {
         /**
          * @var \yii\web\AssetBundle $asset
@@ -134,14 +134,14 @@ class Tree extends Widget
         $asset::register($view);
     }
 
-    private function registerJs()
+    protected function registerJs()
     {
         $dragAndDrop = $this->dragAndDropUrl ? 'true' : 'false';
         $treeJson = (new JsonNestedSetsHelper($this->config))
             ->renderTree();
 
         $js = <<<JS
-$('.{$this->options['class']}').tree({
+$('.{$this->options['class']}').nstree({
     data: {$treeJson},
     autoEscape: false,
     dragAndDrop: {$dragAndDrop}
@@ -151,7 +151,7 @@ JS;
             ->registerJs($js);
     }
 
-    private function renderLayout()
+    protected function renderLayout()
     {
         echo Html::tag('div', '', $this->options).PHP_EOL;
     }
