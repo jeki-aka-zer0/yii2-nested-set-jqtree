@@ -13,7 +13,6 @@
 	],
 	"require": {
 		"yiisoft/yii2": "*",
-		"bower-asset/jquery": "2.2.*@stable | 2.1.*@stable | 1.11.*@stable | 1.12.*@stable",
 		"bower-asset/jqtree": "*"
 	},
 	"autoload": {
